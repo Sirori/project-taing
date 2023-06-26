@@ -369,166 +369,105 @@ iframe {
 
 body {
   background: #000;
-  overflow: hidden;
 }
 
-.popular, .livechannel {
-  width: 105vw;
-  padding-left: 3%;
-  padding-bottom: 3%;
-  overflow: hidden;
+.profile {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
 }
-.popular h2, .livechannel h2 {
+.profile__title {
   color: #fff;
-  font-size: 1.3vw;
+  font-size: 3vw;
+  margin-bottom: 2vh;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
-.popular__list, .livechannel__list {
-  list-style: none;
+.profile__select {
+  color: #C4C4C4;
+  font-size: 1.7vw;
+  font-weight: 600;
+}
+.profile__container {
+  margin: 6% 10%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: stretch;
-  gap: 1%;
-  font-size: 1rem;
-  color: #C4C4C4;
-  counter-reset: rank;
+  gap: 4%;
 }
-.popular__item, .livechannel__item {
-  width: 15rem;
-  overflow: hidden;
-  counter-increment: rank;
-  position: relative;
-}
-.popular__itemTitle, .livechannel__itemTitle {
-  width: 95%;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  padding: 4% 0;
-  padding-left: 25%;
-  font-size: 1.2vw;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.popular__item::before, .livechannel__item::before {
-  content: counter(rank);
-  color: #fff;
-  font-size: 4vw;
-  font-weight: 700;
-  font-style: italic;
-  position: absolute;
-  bottom: -2%;
-  left: 0;
-}
-.popular__itemContainer, .livechannel__itemContainer {
+.profile__itemLink {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  padding-top: 2%;
-  padding-left: 21%;
-  gap: 0.1875rem;
+  gap: 3vh;
+  color: #A6A6A6;
+  position: relative;
+}
+.profile__itemImgBox::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 85%;
+}
+.profile__itemImgBox::after {
+  content: url(./../../assets/icon-profile-lock.png);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+.profile__itemName {
+  font-size: 1.7vw;
+}
+.profile__edit {
+  background: transparent;
+  color: #A6A6A6;
+  font-size: 1.5vw;
+  border: 1px solid #A6A6A6;
+  border-radius: 5px;
+  padding: 1.5% 5%;
 }
 @media (min-width: 769px) and (max-width: 1200px) {
-  .popular, .livechannel {
-    width: 150vw;
+  .profile__itemImgBox::after {
+    content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
   }
-  .popular h2, .livechannel h2 {
+  .profile__title {
     font-size: 3vw;
-    margin-bottom: 0.625rem;
-  }
-  .popular__item::before, .livechannel__item::before {
-    font-size: 5.5vw;
-    bottom: 2%;
-  }
-  .popular__itemTitle, .livechannel__itemTitle {
-    font-size: 1.7vw;
   }
 }
 @media (max-width: 768px) {
-  .popular, .livechannel {
-    width: 250vw;
+  .profile__title {
+    font-size: 4vw;
+    margin-bottom: 1%;
   }
-  .popular h2, .livechannel h2 {
-    font-size: 3.4vw;
-    margin-bottom: 10px;
-  }
-  .popular__item::before, .livechannel__item::before {
-    font-size: 8vw;
-    bottom: 2%;
-  }
-  .popular__itemTitle, .livechannel__itemTitle {
+  .profile__select {
     font-size: 2.5vw;
   }
-}
-
-.redCircle::after {
-  position: absolute;
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: #E93945;
-  top: 2%;
-  right: 0%;
-  border-radius: 50%;
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  .redCircle::after {
-    width: 5px;
-    height: 5px;
+  .profile__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 2vh;
   }
-}
-@media (max-width: 768px) {
-  .redCircle::after {
-    width: 3px;
-    height: 3px;
+  .profile__item {
+    width: 35%;
+    margin-bottom: 2%;
   }
-}
-
-.livechannel__itemTitle {
-  padding: 0;
-  color: #fff;
-}
-.livechannel__itemContent {
-  color: #A6A6A6;
-  font-size: 1.1vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.livechannel__itemRating {
-  color: #6B6B6B;
-  font-size: 1vw;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.livechannel__item::before {
-  top: 63%;
-  left: 0;
-}
-@media (max-width: 768px) {
-  .livechannel__item::before {
-    top: 60%;
+  .profile__itemLink {
+    gap: 2vw;
   }
-  .livechannel__itemContent {
+  .profile__itemImgBox::after {
+    content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
+  }
+  .profile__itemName {
+    font-size: 2.8vw;
+  }
+  .profile__edit {
     font-size: 2vw;
   }
-  .livechannel__itemRating {
-    font-size: 1vw;
-  }
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  .livechannel__item::before {
-    top: 50%;
-  }
-}
-
-body {
-  background: #000;
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=index.css.map */
