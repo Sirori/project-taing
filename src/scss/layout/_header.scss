@@ -5,6 +5,11 @@ body {
   background: #000;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .appHeader {
   display: flex;
   white-space: nowrap;

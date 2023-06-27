@@ -1,8 +1,5 @@
 @use "./../utils" as *;
 
-* {
-  box-sizing: border-box;
-}
 
 /* 공통 메인 */
 .app-main {
@@ -15,7 +12,9 @@
 .main__banner {
   width: 100%;
   position: relative;
+  padding-bottom: 3%;
 }
+
 .main__figure{
   padding-right: 0;
 }
@@ -190,8 +189,6 @@
 
 /* 배너 1 타이틀 */
 .banner1__title {
-  display: inline;
-  width: 315px;
   font-size: 1.3vw;
   font-weight: 700;
   line-height: 140%;
@@ -203,10 +200,11 @@
 .banner1__list {
   width: 110vw;
   list-style: none;
-  display: flex;
+  @include flexbox;
+  gap: 1%;
   flex-flow: row nowrap;
-  margin-top: 12px;
   padding-left: 3%;
+  padding-bottom: 3%;
   padding-right: 12px;
   
   @include tablet{
@@ -252,24 +250,19 @@ figure {
 
 /* 배너2 타이틀 */
 .banner2__title {
-  // display: inline;
-  width: 315px;
   font-size: 1.3vw;
   font-weight: 700;
   line-height: 140%;
-  color: #ffff;
   padding-left: 3%;
-  margin-top: 3%;
 }
 
 /* 배너2 리스트 스타일 */
 .banner2__list {
   width: 116.5vw;
-  list-style: none;
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 12px;
+  @include flexbox;
+  gap: 1%;
   padding-left: 3%;
+  padding-bottom: 3%;
   padding-right: 12px;
   position: relative;
   

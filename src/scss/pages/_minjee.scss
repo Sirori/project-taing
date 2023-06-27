@@ -2,36 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 
-.minjee {
-  background: black;
-  height: 100vh;
-  color: white;
-  overflow: hidden;
-}
-
 .a11yHidden {
   @include a11yHidden();
 }
 
-.title {
-  margin-bottom: 1%;
-
-  @include desktop {
-    @include titleFont(1.2vw, 700, 140%);
-  }
-
-  @include tablet {
-    @include titleFont(1.7vw, 700, 140%);
-  }
-  
-  @include mobile {
-    @include titleFont(2.5vw, 600, 150%);
-  }
-}
-
-
 .only {
   padding-left: 3%;
+  padding-bottom: 3%;
 
   &__list {
   @include flexbox;
@@ -54,6 +31,7 @@
 
 .event {
   padding-left: 3%;
+  padding-bottom: 2%;
 
   &__list {
   @include flexbox;
@@ -75,6 +53,10 @@
 }
 
 .sports {
-  @include paddingX(3%);
   @include paddingY(2%);
+  @include paddingX(3%);
+}
+
+.sports img {
+  width: 100%;
 }

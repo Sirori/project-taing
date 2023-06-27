@@ -1,0 +1,637 @@
+@use "./../utils/" as *;
+@use "./../base/" as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  background: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.appHeader {
+  display: flex;
+  white-space: nowrap;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5% 4%;
+  font-size: rem(20px);
+  color: $gray1;
+
+  @include tablet {
+    width: 93%;
+    height: 56px;
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  @include mobile {
+    height: 45px;
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 93%;
+    z-index: 1;
+  }
+
+}
+
+
+.headerWrapper {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+
+  @include mobile {
+    gap: 3.4vw;
+  }
+}
+
+h1 {
+  width: rem(130px);
+}
+
+.appHeader__menu {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: rem(4px);
+}
+
+.searchProfile {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 2vw;
+  
+  &__img {
+    width: rem(52px);
+  }
+}
+
+.mobile--hidden {
+  @include mobile {
+    display: none;
+  }
+}
+
+/* 공통 메인 */
+.app-main {
+  background: #000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 메인 배너  */
+.main__banner {
+  width: 100%;
+  position: relative;
+  padding-bottom: 3%;
+}
+
+.main__figure {
+  width: 100%;
+}
+
+.main__figure img {
+  width: 100%;
+}
+
+/* 메인 베너 아이콘 */
+.left__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.right__icon {
+  position: absolute;
+  top: 50%;
+  right: -2%;
+}
+
+.i__icon {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  @include tablet{
+    
+    &Image{
+      width: 6%;
+    }
+  }
+
+  @include mobile{
+    
+    &Image {
+        width: 7%;
+      }
+  }
+  
+}
+
+.dot::before{
+  position: absolute;
+  content: "";
+  background: #898989;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 12%;
+  
+  @include tablet{
+    top: 25%;
+  }
+
+  @include mobile{
+    top: 30%;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+  }
+}
+.dot1__icon::before{
+  left: 8%;
+  @include tablet {
+    left: 10%;
+  }
+
+    @include mobile {
+      left: 12%;
+    }
+}
+
+.whitedot__icon::before{
+  left: 12%;
+  background: #fff;
+  @include tablet {
+    left: 16%;
+  }
+
+    @include mobile {
+      left: 18%;
+    }
+}
+
+.dot2__icon::before{
+  left: 16%;
+  @include tablet {
+    left: 22%;
+  }
+
+    @include mobile {
+      left: 24%;
+    }
+}
+
+.dot3__icon::before{
+  left: 20%;
+  @include tablet {
+    left: 28%;
+  }
+
+    @include mobile {
+      left: 30%;
+    }
+}
+
+
+.starticon__group{
+  width: 30%;
+  height: 5%;
+  position: absolute;
+  top: 82%;
+  left: 3.5%;
+
+  @include mobile{
+    top: 82%;
+  }
+}
+.i__icon{
+  width: 100%;
+  margin-right: 10%;
+}
+
+
+.viewdatail{
+  border: 1px solid #A6A6A6;
+  border-radius: 4px;
+  padding: 1.7% 1.7%;
+  position: absolute;
+  right: 5%;
+  top: 70%;
+  color: #fff;
+  font-size: 3vw;
+
+
+
+  @include tablet{
+    padding: 1.7% 5.2%;
+    font-size: 1.6vw;
+  }
+
+  @include desktop{
+    padding: 1.7% 4.2%;
+    font-size: 1.3vw;
+  }
+
+  a{
+    display: block;
+  }
+}
+
+
+
+.second__life {
+  color: #ffff;
+  font-size: 1.3vw;
+  position: absolute;
+  top: 65%;
+  padding: 3.5%;
+  
+  @include tablet{
+  font-size: 1.9vw;
+  }
+
+  @include mobile{
+    font-size: 2.1vw;
+  }
+}
+
+
+
+
+/* 배너 1 타이틀 */
+.banner1__title {
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 140%;
+  color: #ffff;
+  padding-left: 3%;
+}
+
+/* 배너1 리스트 스타일 */
+.banner1__list {
+  width: 110vw;
+  list-style: none;
+  @include flexbox;
+  gap: 1%;
+  flex-flow: row nowrap;
+  padding-left: 3%;
+  padding-bottom: 3%;
+  padding-right: 12px;
+  
+  @include tablet{
+    width: 150vw;
+  }
+
+  @include mobile{
+    width: 250vw;
+  }
+}
+
+
+
+/* 링크 데코 없애기 */
+.banner__link {
+  width: 240px;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+  padding-right: 16px;
+}
+
+.banner__image {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.banner__coption {
+  color: #c4c4c4;
+  font-size: 1vw;
+  margin-top: 2%;
+  
+  @include tablet{
+    display: none;
+  }
+
+  @include mobile{
+    display: none;
+  }
+}
+
+/* 배너2 타이틀 */
+.banner2__title {
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 140%;
+  padding-left: 3%;
+}
+
+/* 배너2 리스트 스타일 */
+.banner2__list {
+  width: 116.5vw;
+  @include flexbox;
+  gap: 1%;
+  padding-left: 3%;
+  padding-bottom: 3%;
+  padding-right: 12px;
+  position: relative;
+  
+  @include tablet {
+      width: 180vw;
+    }
+  
+    @include mobile {
+      width: 250vw;
+    }
+}
+
+
+
+.caption__2 {
+  color: #a6a6a6;
+  @include mobile{
+    font-size: 1vw;
+  }
+}
+
+.quickVOD__box {
+  position: absolute;
+  top: 0;
+  width: 15%;
+}
+
+.quickVOD__image{
+  width: 100%;
+}
+
+.banner2__coption{
+  color:#c4c4c4;
+  margin-top: 2%;
+
+  @include mobile{
+    font-size: 2vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+
+.contentWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.popular, .livechannel {
+  width: 105vw;
+  padding-left: 3%;
+  padding-bottom: 3%;
+  overflow: hidden;
+
+  &__list {
+    list-style: none;
+    @include flexbox;
+    gap: 1%;
+    font-size: rem(16px);
+    color: $gray1;
+    counter-reset: rank;
+  }
+
+  &__item {
+    overflow: hidden;
+    counter-increment: rank;
+    position: relative;
+
+    &Title {
+      width: 95%;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      padding: 4% 0;
+      padding-left: 25%;
+      font-size: 1.2vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__item::before {
+    content: counter(rank);
+    color: $white;
+    font-size: 3.6vw;
+    font-weight: 600;
+    font-style: italic;
+    position: absolute;
+    bottom: -2%;
+    left: 0;
+  }
+
+  &__itemContainer {
+    @include flexbox($direction:column);
+    padding-top: 2%;
+    padding-left: 21%;
+    gap: rem(3px);
+  }
+
+  @include tablet {
+    width: 150vw;
+
+    &__item::before {
+      font-size: 4vw;
+      bottom: 2%;
+    }
+
+    &__itemTitle {
+      font-size: 1.7vw;
+    }
+  }
+
+  @include mobile {
+    width: 250vw;
+
+    &__item::before {
+      font-size: 5vw;
+      bottom: 2%;
+    }
+
+    &__itemTitle {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+.title {
+  color: $white;
+  font-size: 1.3vw;
+  font-weight: 700;
+  margin-bottom: rem(16px);
+
+  @include tablet {
+    font-size: 2vw;
+    margin-bottom: rem(10px);
+  }
+
+  @include mobile {
+    font-size: 2.7vw;
+    margin-bottom: 10px;
+  }
+}
+
+.popular__item {
+  width: rem(240px);
+}
+
+.redCircle::after {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: $red;
+  top: 10%;
+  right: 0%;
+  border-radius: 50%;
+
+  @include tablet {
+    width: 6px;
+    height: 6px;
+  }
+
+  @include mobile {
+    top: 8%;
+    width: 4px;
+    height: 4px;
+  }
+}
+
+.popular__item:nth-child(4) .redCircle::after, .popular__item:nth-child(5) .redCircle::after {
+  right: 3%;
+}
+
+.livechannel {
+
+  width: 120vw;
+
+  &__itemTitle {
+    padding: 0;
+    color: $white;
+  }
+
+  &__itemContent {
+    color: $gray2;
+    font-size: 1.1vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__itemRating {
+    color: $gray3;
+    font-size: 1vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__item::before {
+    top: 67%;
+    left: 0;
+  }
+
+  @include mobile {
+
+    width: 190vw;
+
+    &__itemContent {
+      font-size: 2vw;
+    }
+
+    &__itemRating {
+      font-size: 1vw;
+    }
+  }
+
+  @include tablet {
+
+    width: 155vw;
+
+    &__item::before {
+      top: 70%;
+    }
+  }
+}
+
+.a11yHidden {
+  @include a11yHidden();
+}
+
+.only {
+  padding-left: 3%;
+  padding-bottom: 3%;
+
+  &__list {
+  @include flexbox;
+  gap: 1%;
+  margin-bottom: 2%;
+
+  @include desktop {
+    width: 105vw; 
+  }
+
+  @include tablet {
+    width: 160vw;
+  }
+
+  @include mobile {
+    width: 320vw;
+  }
+  }
+}
+
+.event {
+  padding-left: 3%;
+  padding-bottom: 2%;
+
+  &__list {
+  @include flexbox;
+  gap: 1%;
+  margin-bottom: 2%;
+
+  @include desktop {
+    width: 110vw; 
+  }
+
+  @include tablet {
+    width: 170vw;
+  }
+
+  @include mobile {
+    width: 270vw;
+  }
+  }
+}
+
+.sports {
+  @include paddingY(2%);
+  @include paddingX(3%);
+}
+
+.sports img {
+  width: 100%;
+}
