@@ -1,0 +1,122 @@
+@use "sass:math";
+@use "./../utils" as *;
+@use "./../base" as *;
+
+
+input {
+  border: none;
+}
+
+.findId {
+  max-width: rem(700px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vw 1vw;
+  line-height: 150%;
+  margin-top: 5%;
+  font-size: rem(28px);
+  color: $gray0;
+
+  @include mobile {
+    padding: 1vw 3vw;
+  }
+  
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    &__form{
+      display: flex;
+      flex-flow: column nowrap;
+      margin-top: 1.5vw;
+    }
+  }
+}
+
+.findId__title {
+  font-size: rem(35px);
+  font-weight: bold;
+  color: $white;
+  margin-bottom: rem(60px);
+}
+
+.form__input {
+  padding: 10px 20px;
+  background: $gray5;
+  color: $gray7;
+  border-radius: 4px;
+  line-height: 160%;
+
+  &__btn {
+    background: $gray6;
+    color: $gray0;
+    margin-top: 2vw;
+  }
+}
+
+.findId__certification {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 2vw 0;
+}
+
+.or {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  white-space: nowrap;
+  padding: 4vw 0 1.5vw;
+
+  &__txt {
+    font-size: rem(16px);
+  }
+}
+
+.fakeLine2 {
+  height: 1px;
+  width: 60%;
+  background-color: $gray4;
+}
+
+.findId__certification__btn {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background: #E1E1E1;
+  margin-top: 1.5vw;
+}
+
+.fontDeco {
+  font-size: rem(26px);
+  color: $gray0;
+  font-weight: 600;
+  
+  &__white {
+    color: $white;
+  }
+  
+  &__gray7 {
+    color: $gray7;
+    font-weight: 400;
+  }
+
+  &__gray0 {
+    color: $gray0;
+    font-size: rem(21px);
+  }
+  
+  &__black {
+    color: $black;
+  }
+
+}
+
