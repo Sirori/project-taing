@@ -8,6 +8,20 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+.headerWrapper {
+  height: 100px;
+  margin: 1.5% 4%;
+
+  @include tablet {
+    height: 56px;
+  }
+  @include mobile {
+    height: 45px;
+  }
+
 }
 
 .profile {
@@ -30,7 +44,7 @@ a {
 
   &__container {
     margin: 6% 10%;
-    @include flexbox($justify:space-between);
+    @include flexbox($justify:center);
     gap: 4%;
   }
 
