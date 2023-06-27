@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 /* Accessibility Styles */
 .a11yHidden,
 legend {
@@ -9,6 +10,112 @@ legend {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.minjee {
+  background: black;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.a11yHidden {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.title {
+  margin-bottom: 1%;
+}
+@media (min-width: 1201px) {
+  .title {
+    font-size: 1.2vw;
+    font-weight: 700;
+    line-height: 140%;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .title {
+    font-size: 1.7vw;
+    font-weight: 700;
+    line-height: 140%;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5vw;
+    font-weight: 600;
+    line-height: 150%;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+
+.only {
+  padding-left: 3%;
+}
+.only__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1%;
+  margin-bottom: 2%;
+}
+@media (min-width: 1201px) {
+  .only__list {
+    width: 105vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .only__list {
+    width: 160vw;
+  }
+}
+@media (max-width: 768px) {
+  .only__list {
+    width: 320vw;
+  }
+}
+
+.event {
+  padding-left: 3%;
+}
+.event__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1%;
+  margin-bottom: 2%;
+}
+@media (min-width: 1201px) {
+  .event__list {
+    width: 110vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .event__list {
+    width: 170vw;
+  }
+}
+@media (max-width: 768px) {
+  .event__list {
+    width: 270vw;
+  }
+}
+
+.sports {
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 * {
@@ -649,24 +756,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-body,
-body::before,
-body::after,
-body *,
-body *::before,
-body *::after {
-  box-sizing: border-box;
-}
-
-[class] {
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 body {
