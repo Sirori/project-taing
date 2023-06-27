@@ -355,6 +355,22 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+.headerWrapper {
+  height: 100px;
+  margin: 1.5% 4%;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .headerWrapper {
+    height: 56px;
+  }
+}
+@media (max-width: 768px) {
+  .headerWrapper {
+    height: 45px;
+  }
 }
 
 .profile {

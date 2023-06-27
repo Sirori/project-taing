@@ -8,8 +8,21 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
+.headerWrapper {
+  height: 100px;
+  margin: 1.5% 4%;
+
+  @include tablet {
+    height: 56px;
+  }
+  @include mobile {
+    height: 45px;
+  }
+
+}
 .profile {
   padding-top: 5%;
   padding-bottom: 5%;
