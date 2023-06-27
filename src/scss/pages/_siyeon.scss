@@ -4,7 +4,11 @@
 
 body {
   background: $black;
+}
+
+.contentWrapper {
   overflow: hidden;
+  width: 100%;
 }
 
 .popular, .livechannel {
@@ -30,7 +34,6 @@ body {
   }
 
   &__item {
-    width: rem(240px);
     overflow: hidden;
     counter-increment: rank;
     position: relative;
@@ -52,8 +55,8 @@ body {
   &__item::before {
     content: counter(rank);
     color: $white;
-    font-size: 4vw;
-    font-weight: 700;
+    font-size: 3.6vw;
+    font-weight: 600;
     font-style: italic;
     position: absolute;
     bottom: -2%;
@@ -76,7 +79,7 @@ body {
     }
 
     &__item::before {
-      font-size: 5.5vw;
+      font-size: 4vw;
       bottom: 2%;
     }
 
@@ -94,7 +97,7 @@ body {
     }
 
     &__item::before {
-      font-size: 8vw;
+      font-size: 5vw;
       bottom: 2%;
     }
 
@@ -104,28 +107,39 @@ body {
   }
 }
 
+.popular__item {
+  width: rem(240px);
+}
+
 .redCircle::after {
   position: absolute;
   content: '';
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   background: $red;
-  top: 2%;
+  top: 10%;
   right: 0%;
   border-radius: 50%;
 
   @include tablet {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
   }
 
   @include mobile {
-    width: 3px;
-    height: 3px;
+    top: 8%;
+    width: 4px;
+    height: 4px;
   }
 }
 
+.popular__item:nth-child(4) .redCircle::after, .popular__item:nth-child(5) .redCircle::after {
+  right: 10%;
+}
+
 .livechannel {
+
+  width: 120vw;
 
   &__itemTitle {
     padding: 0;
