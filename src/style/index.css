@@ -693,7 +693,11 @@ iframe {
 
 body {
   background: #000;
+}
+
+.contentWrapper {
   overflow: hidden;
+  width: 100%;
 }
 
 .popular, .livechannel {
@@ -720,7 +724,6 @@ body {
   counter-reset: rank;
 }
 .popular__item, .livechannel__item {
-  width: 15rem;
   overflow: hidden;
   counter-increment: rank;
   position: relative;
@@ -740,8 +743,8 @@ body {
 .popular__item::before, .livechannel__item::before {
   content: counter(rank);
   color: #fff;
-  font-size: 4vw;
-  font-weight: 700;
+  font-size: 3.6vw;
+  font-weight: 600;
   font-style: italic;
   position: absolute;
   bottom: -2%;
@@ -765,7 +768,7 @@ body {
     margin-bottom: 0.625rem;
   }
   .popular__item::before, .livechannel__item::before {
-    font-size: 5.5vw;
+    font-size: 4vw;
     bottom: 2%;
   }
   .popular__itemTitle, .livechannel__itemTitle {
@@ -781,7 +784,7 @@ body {
     margin-bottom: 10px;
   }
   .popular__item::before, .livechannel__item::before {
-    font-size: 8vw;
+    font-size: 5vw;
     bottom: 2%;
   }
   .popular__itemTitle, .livechannel__itemTitle {
@@ -789,29 +792,41 @@ body {
   }
 }
 
+.popular__item {
+  width: 15rem;
+}
+
 .redCircle::after {
   position: absolute;
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   background: #E93945;
-  top: 2%;
+  top: 10%;
   right: 0%;
   border-radius: 50%;
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .redCircle::after {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
   }
 }
 @media (max-width: 768px) {
   .redCircle::after {
-    width: 3px;
-    height: 3px;
+    top: 8%;
+    width: 4px;
+    height: 4px;
   }
 }
 
+.popular__item:nth-child(4) .redCircle::after, .popular__item:nth-child(5) .redCircle::after {
+  right: 10%;
+}
+
+.livechannel {
+  width: 120vw;
+}
 .livechannel__itemTitle {
   padding: 0;
   color: #fff;
