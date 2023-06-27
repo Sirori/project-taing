@@ -1,1 +1,100 @@
-// footer.scss
+@use "./../utils/" as *;
+@use "./../base/" as *;
+
+html {
+  font-family: 'Pretendard';
+  font-size: calc(8px + .5vw);
+}
+
+.appFooter {
+  background: #000;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  padding: 7vw 4vw 9vw;
+  line-height: 160%;
+  color: $gray3;
+}
+
+
+.appFooter__link {
+  display: flex;
+  color: $gray1;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.fakeLine {
+  height: rem(1px);
+  background: #212121;
+  margin: rem(27px) 0;
+}
+
+.appFooter__notice{
+  color: $gray1;
+
+  &__span {
+  color: $gray3;
+  }
+}
+
+.appFooter__innerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12px);
+
+}
+
+.appFooter__wrapper__subLinks {
+  display: flex;
+  flex-flow: row nowrap;
+  color: $gray1;
+  gap: 2%;
+
+  @include mobile {
+    flex-flow: column nowrap;
+    gap: rem(4px);
+  }
+}
+
+// 대표이사 ~ 
+.appFooter__innerWrapper__info {
+  color: $gray3;
+  
+  @include mobile{
+    display: none;
+    
+  }
+}
+
+.mobile--hidden {
+  
+  @include mobile {
+    display: hidden;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.appFooter__snsLinks {
+  display: flex;
+  gap: 20px;
+  
+  @include mobile {
+    gap: rem(8px);
+  }
+}
+
+.sns_bg {
+  width: 4em;
+  height: 4em;
+  background: $gray4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0 30%;
+}
+

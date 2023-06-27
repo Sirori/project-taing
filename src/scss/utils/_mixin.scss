@@ -1,1 +1,32 @@
-// mixin.scss
+@use "unit" as *;
+
+@mixin titleFont($s, $w, $h) {
+  font-size: $s;
+  font-weight: $w;
+  line-height: $h;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@mixin autoMargin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin padding($spacing) {
+  @include paddingX($spacing);
+  @include paddingY($spacing);
+}
+
+@mixin paddingX($spacing) {
+  padding-left: $spacing;
+  padding-right: $spacing;
+}
+
+@mixin paddingY($spacing) {
+  padding-top: $spacing;
+  padding-bottom: $spacing;
+}
+
+@mixin padding($spacing) {
+  padding: $spacing;
+}

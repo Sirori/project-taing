@@ -1,1 +1,312 @@
-// home.scss
+@use "./../utils" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+/* 공통 메인 */
+.app-main {
+  background: #000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 메인 배너  */
+.main__banner {
+  width: 100%;
+  position: relative;
+}
+.main__figure{
+  padding-right: 0;
+}
+
+/* 메인 베너 아이콘 */
+.left__icon {
+  width: 7%;
+  height: 15%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.right__icon {
+  width: 7%;
+  height: 15%;
+  position: absolute;
+  top: 50%;
+  right: -2.5%;
+}
+
+.i__icon {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  @include tablet{
+    
+    &Image{
+      width: 6%;
+    }
+  }
+
+  @include mobile{
+    
+    &Image {
+        width: 7%;
+      }
+  }
+  
+}
+
+.dot::before{
+  position: absolute;
+  content: "";
+  background: #898989;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 12%;
+  
+  @include tablet{
+    top: 25%;
+  }
+
+  @include mobile{
+    position: absolute;
+    top: 140%;
+    width: 5px;
+    height: 5px;
+  }
+}
+.dot1__icon::before{
+  left: 8%;
+  @include tablet {
+    left: 10%;
+  }
+
+    @include mobile {
+      left: 14%;
+    }
+}
+
+.whitedot__icon::before{
+  left: 12%;
+  background: #fff;
+  @include tablet {
+    left: 16%;
+  }
+
+    @include mobile {
+      left: 24%;
+    }
+}
+
+.dot2__icon::before{
+  left: 16%;
+  @include tablet {
+    left: 22%;
+  }
+
+    @include mobile {
+      left: 34%;
+    }
+}
+
+.dot3__icon::before{
+  left: 20%;
+  @include tablet {
+    left: 28%;
+  }
+
+    @include mobile {
+      left: 44%;
+    }
+}
+
+
+.starticon__group{
+  width: 30%;
+  height: 5%;
+  position: absolute;
+  top: 82%;
+  left: 3.5%;
+
+  @include mobile{
+    top: 80%;
+  }
+}
+.i__icon{
+  width: 100%;
+  margin-right: 10%;
+}
+
+
+.viewdatail{
+  border: 1px solid #A6A6A6;
+  border-radius: 4px;
+  padding: 1.7% 1.7%;
+  position: absolute;
+  right: 5%;
+  top: 70%;
+  color: #fff;
+  font-size: 3vw;
+
+
+
+  @include tablet{
+    padding: 1.7% 5.2%;
+    font-size: 1.6vw;
+  }
+
+  @include desktop{
+    padding: 1.7% 4.2%;
+    font-size: 1.3vw;
+  }
+
+  a{
+    display: block;
+  }
+}
+
+
+
+.second__life {
+  color: #ffff;
+  font-size: 1.3vw;
+  position: absolute;
+  top: 65%;
+  padding: 3.5%;
+  
+  @include tablet{
+  font-size: 1.9vw;
+  }
+
+  @include mobile{
+    font-size: 2.1vw;
+  }
+}
+
+
+
+
+/* 배너 1 타이틀 */
+.banner1__title {
+  display: inline;
+  width: 315px;
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 140%;
+  color: #ffff;
+  padding-left: 3%;
+}
+
+/* 배너1 리스트 스타일 */
+.banner1__list {
+  width: 110vw;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 12px;
+  padding-left: 3%;
+  padding-right: 12px;
+  
+  @include tablet{
+    width: 150vw;
+  }
+
+  @include mobile{
+    width: 250vw;
+  }
+}
+
+
+
+/* 링크 데코 없애기 */
+.banner__link {
+  width: 240px;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+  padding-right: 16px;
+}
+
+.banner__image {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.banner__coption {
+  color: #c4c4c4;
+  font-size: 1vw;
+  
+  @include tablet{
+    display: none;
+  }
+
+  @include mobile{
+    display: none;
+  }
+}
+
+/* 배너2 타이틀 */
+.banner2__title {
+  // display: inline;
+  width: 315px;
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 140%;
+  color: #ffff;
+  padding-left: 3%;
+  margin-top: 3%;
+}
+
+/* 배너2 리스트 스타일 */
+.banner2__list {
+  width: 116.5vw;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 12px;
+  padding-left: 3%;
+  padding-right: 12px;
+  position: relative;
+  
+  @include tablet {
+      width: 180vw;
+    }
+  
+    @include mobile {
+      width: 250vw;
+    }
+}
+
+
+
+.caption__2 {
+  color: #a6a6a6;
+  @include mobile{
+    font-size: 1vw;
+  }
+}
+
+.quickVOD__box {
+  position: absolute;
+  top: 0;
+  width: 15%;
+}
+
+.quickVOD__image{
+  width: 100%;
+}
+
+.banner2__coption{
+  color:#c4c4c4;
+  @include mobile{
+    font-size: 2vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
