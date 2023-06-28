@@ -55,7 +55,7 @@ a {
     position: relative;
   }
 
-  &__itemImgBox::before {
+  &__itemImgBoxLock::before {
     content: '';
     position: absolute;
     background: rgba(0, 0, 0, 0.3);
@@ -69,7 +69,6 @@ a {
     top: 40%;
     left: 50%;
     transform: translate(-40%, -50%);
-    z-index: 5;
   }
 
   &__itemName {
@@ -86,7 +85,7 @@ a {
   }
 
   @include tablet {
-    &__itemImgBox::after {
+    &__itemImgBoxLock::after {
       content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
     }
 
@@ -121,7 +120,7 @@ a {
       gap: 2vw;
     }
 
-    &__itemImgBox::after {
+    &__itemImgBoxLock::after {
       content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
     }
 
