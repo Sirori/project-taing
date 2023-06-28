@@ -23,7 +23,6 @@ a {
   }
 
 }
-
 .profile {
   padding-top: 5%;
   padding-bottom: 5%;
@@ -64,7 +63,7 @@ a {
   }
 
   &__itemImgBox::after {
-    content: url(./../../assets/icon-profile-lock.png);
+    content: url(./../../assets/icon-device-desktop-name-pencil.png);
     position: absolute;
     top: 40%;
     left: 50%;
@@ -75,18 +74,18 @@ a {
     font-size: 1.7vw;
   }
 
-  &__edit {
-    background: transparent;
-    color: $gray2;
+  &__button {
+    background: $white;
+    color: $black;
     font-size: 1.5vw;
-    border: 1px solid $gray2;
+    border: 1px solid $white;
     border-radius: 5px;
     padding: 1.5% 5%;
   }
 
   @include tablet {
     &__itemImgBox::after {
-      content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
+      content: url(./../../assets/icon-device-mobile-tablet-name-pencil.png);
     }
 
     &__title {
@@ -121,14 +120,14 @@ a {
     }
 
     &__itemImgBox::after {
-      content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
+      content: url(./../../assets/icon-device-mobile-tablet-name-pencil.png);
     }
 
     &__itemName {
       font-size: 2.8vw;
     }
 
-    &__edit{
+    &__button{
       font-size: 2vw;
     }
   }
