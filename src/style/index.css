@@ -818,7 +818,7 @@ input {
 }
 @media (max-width: 768px) {
   .findId {
-    padding: 1vw 3vw;
+    padding: 1vw 4vw;
   }
 }
 .findId__wrapper {
