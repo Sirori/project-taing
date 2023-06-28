@@ -1,50 +1,65 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>header-footer</title>
-  <link rel="stylesheet" href="/style/index.css" />
-  <link rel="preload stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
-
+  <link rel="stylesheet" href="./../style/index.css" />
+  <title>프로필 페이지</title>
 </head>
 <body>
-  <header class="appHeader">
+  <header>
     <div class="headerWrapper">
       <h1>
         <a href="/">
-          <img class="logo_img" src="assets/icons/desktop_logo.svg" alt="Taing" />
+          <img class="logo_img" src="./../assets/icons/desktop_logo.svg" alt="Taing" />
         </a>
       </h1>
-      <ul class="appHeader__menu mobile--hidden">
-        <li>
-          <a class="live" href="/">
-            <img src="./assets/icons/Live.png" alt="" aria-labelledby="live_text">
-            <span id="live_text">실시간</span>
-          </a>
-        </li>
-        <li>
-          <a href="/">TV프로그램</a>
-        </li>
-        <li><a href="/">영화</a></li>
-        <li>
-          <a href="/">
-            <img src="./assets/icons/Paramount.png" alt="" />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="searchProfile">
-      <a href="/">
-        <img class="searchProfile__img" src="./assets/icons/Search.png" alt="" />
-      </a>
-      <a href="/">
-        <img class="searchProfile__img" src="./assets/icons/Profile.png" alt="" />
-      </a>
     </div>
   </header>
 
+  <!-- 프로필 선택 섹션 -->
+  <section class="profile">
+    <h2 class="profile__title">프로필 선택</h2>
+    <span class="profile__select" aria-label="시청할 프로필을 선택해주세요">시청할 프로필을 선택해주세요.</span>
+    <ul class="profile__container">
+      <li class="profile__item">
+        <a href="/" class="profile__itemLink">
+          <div class="profile__itemImgBox">
+            <img src="./../assets/profile-1.png" alt="" />
+          </div>
+          <span class="profile__itemName" aria-label="프로필명">슬비님</span>
+        </a>
+      </li>
+      <li class="profile__item">
+        <a href="/" class="profile__itemLink">
+          <div class="profile__itemImgBox">
+            <img src="./../assets/profile-2.png" alt="" />
+          </div>
+          <span class="profile__itemName" aria-label="프로필명">야무</span>
+        </a>
+      </li>
+      <li class="profile__item">
+        <a href="/" class="profile__itemLink">
+          <div class="profile__itemImgBox">
+            <img src="./../assets/profile-3.png" alt="" />
+          </div>
+          <span class="profile__itemName" aria-label="프로필명">범쌤</span>
+        </a>
+      </li>
+      <li class="profile__item">
+        <a href="/" class="profile__itemLink">
+          <div class="profile__itemImgBox--negative">
+            <img src="./../assets/profile-4.png" alt="" />
+          </div>
+          <span class="profile__itemName" aria-label="프로필명">이듬</span>
+        </a>
+      </li>
+    </ul>
+    <a href="/src/profile-edit.html" class="profile__edit">프로필 편집</a>
+  </section>
 
+
+  <!-- 푸터 -->
   <footer class="appFooter">
     <div class="appFooter__wrapper">
       <ul class="appFooter__link">
@@ -86,10 +101,10 @@
         </section>
 
         <ul class="appFooter__snsLinks">
-          <li><a class="sns_bg" href="/"><img class="sns_img" src="./assets/icons/youtube.png" alt="youtube" /></a></li>
-          <li><a class="sns_bg" href="/"><img class="sns_img" src="./assets/icons/instagram.png" alt="instagram" /></a></li>
-          <li><a class="sns_bg" href="/"><img class="sns_img" src="./assets/icons/twitter.png" alt="twitter" /></a></li>
-          <li><a class="sns_bg" href="/"><img class="sns_img" src="./assets/icons/facebook.png" alt="facebook" /></a></li>
+          <li><a class="sns_bg" href="/"><img class="sns_img" src="./../assets/icons/youtube.png" alt="youtube" /></a></li>
+          <li><a class="sns_bg" href="/"><img class="sns_img" src="./../assets/icons/instagram.png" alt="instagram" /></a></li>
+          <li><a class="sns_bg" href="/"><img class="sns_img" src="./../assets/icons/twitter.png" alt="twitter" /></a></li>
+          <li><a class="sns_bg" href="/"><img class="sns_img" src="./../assets/icons/facebook.png" alt="facebook" /></a></li>
         </ul>
 
         <small class="copyright">Copyright &copy; 주식회사 티빙 All right reserved.</small>
@@ -97,10 +112,5 @@
       </div>
     </div>
   </footer>
-    
-    
-
-
-
 </body>
 </html>
