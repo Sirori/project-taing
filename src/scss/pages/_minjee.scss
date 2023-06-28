@@ -1,0 +1,80 @@
+@use "./../utils" as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+.minjee {
+  background: black;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.a11yHidden {
+  @include a11yHidden();
+}
+
+.title {
+  margin-bottom: 1%;
+
+  @include desktop {
+    @include titleFont(1.2vw, 700, 140%);
+  }
+
+  @include tablet {
+    @include titleFont(1.7vw, 700, 140%);
+  }
+  
+  @include mobile {
+    @include titleFont(2.5vw, 600, 150%);
+  }
+}
+
+
+.only {
+  padding-left: 3%;
+
+  &__list {
+  @include flexbox;
+  gap: 1%;
+  margin-bottom: 2%;
+
+  @include desktop {
+    width: 105vw; 
+  }
+
+  @include tablet {
+    width: 160vw;
+  }
+
+  @include mobile {
+    width: 320vw;
+  }
+  }
+}
+
+.event {
+  padding-left: 3%;
+
+  &__list {
+  @include flexbox;
+  gap: 1%;
+  margin-bottom: 2%;
+
+  @include desktop {
+    width: 110vw; 
+  }
+
+  @include tablet {
+    width: 170vw;
+  }
+
+  @include mobile {
+    width: 270vw;
+  }
+  }
+}
+
+.sports {
+  @include paddingX(3%);
+  @include paddingY(2%);
+}
