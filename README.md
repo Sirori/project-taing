@@ -9,7 +9,7 @@
 ## <능히할수있조 - 6조>
 -서진만(조장), 권혜미, 양시연, 정민지 <br>
  개발기간: 2023.06.23 ~ 2023.06.28
-![Alt text](image.png)
+<img width="518" alt="2023-06-28_2 32 38" src="https://github.com/GwonH/project-taing/assets/130988491/4a2bcd5f-7d4b-48a1-99b0-a0dc5f1d98b7">
 
 ## Stack
  <div>
