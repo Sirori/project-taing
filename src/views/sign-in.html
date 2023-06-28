@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style/index.css" />
+  <title>회원가입</title>
+</head>
+<body>
+  <header class="appHeader">
+    <div class="headerWrapper">
+      <h1>
+        <a href="/">
+          <img class="logo_img" src="/assets/icons/desktop_logo.svg" alt="Taing" />
+        </a>
+      </h1>
+    </div>
+  </header>
+    <section class="taing__AllForm">
+      <h2 class="taing__SignIn">티빙 회원가입</h2>
+      <form class="taing__Form">
+        
+        <!-- 아이디 입력 서식 -->
+        <div class="taing__ID">
+            <p class="taing__StartText">아이디와 이메일로 간편하게 티빙을 시작하세요!</p>
+            <!-- 스크린리더를 위한 유틸리티 클래스 적용 -->
+            <label for="userId" class="sr-only">아이디</label>
+            <div class="input__Form">
+              <input id="userId" name="userId" class="taing__input" type="text" placeholder="아이디" required />
+              <div class="input__bottomText" aria-label="아이디 입력 서식의 필수 조건은 영문 또는 영문, 숫자 조합 6~12자리 입니다.">영문 또는 영문, 숫자 조합 6~12자리</div>
+            </div>
+          </div>
+      
+          <!-- 비밀번호 입력 서식 -->
+          <div class="taing__Pwd">
+            <label for="userPassword" class="sr-only">비밀번호</label>
+            <div class="input__Form">
+              <input id="userPassword" name="userPassword" class="taing__input" type="password" placeholder="비밀번호" required />
+              <div class="input__bottomText" aria-label="비밀번호 입력 서식의 필수 조건은 영문, 숫자, 특수문자 조합 8~15자리 입니다.">영문, 숫자, 특수문자(-!@#$%^&*) 조합 8~15자리</div>
+            </div>
+            <div>
+              <img src="/assets/icons/Name=Pw.png" alt="비밀번호 감추기 이미지" class="taing__pwdImage1"/>
+            </div>
+          </div>
+         
+          <!-- 비밀번호 확인 입력 서식 -->
+          <div class="taing__PwdCheck">
+            <label for="userPasswordCheck" class="sr-only">비밀번호 확인</label>
+            <input id="userPasswordCheck" name="userPasswordCheck" class="taing__input" type="password" placeholder="비밀번호 확인" required />
+            <div>
+              <img src="/assets/icons/Name=Pw.png" alt="비밀번호 감추기 이미지" class="taing__pwdImage2"/>
+            </div>
+          </div>
+         
+          <!-- 이메일 입력 서식 -->
+          <div class="taing__Email">
+            <label for="userEmail" class="sr-only">이메일</label>
+            <input id="userEmail" name="userEmail" class="taing__input" type="text" placeholder="이메일" required />
+          </div>
+
+          <!-- 동의 -->
+          <div class="all__Agree">
+            <button class="agree__Button">
+              <img src="/assets/icons/Type=Filled.png" alt="모두 동의합니다의 동의버튼" class="agree__ButtonImage"/>
+            </button>
+            <div class="agree__TextSpace">모두 동의합니다.</div>
+            
+            <button class="agree__Button">
+              <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImage"/>
+            </button>
+            <div class="agree__Text">[필수] 서비스 이용약관 동의</div>
+            
+            <button class="agree__Button">
+              <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImage"/>
+            </button>
+            <div class="agree__Text">[필수] 개인정보 수집 및 서비스 활용 동의</div>
+            
+            <button class="agree__Button">
+              <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImage"/>
+            </button>
+            <div class="agree__Text">[필수] 채널 홈페이지 개인정보 제 3자 제공동의</div>
+            
+            <button class="agree__Button">
+              <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImage"/>
+            </button>
+            <div class="agree__Text">[선택] 개인정보 제 3자 제공동의</div>
+            
+            <button class="agree__Button">
+              <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImage"/>
+            </button>
+            <div class="agree__Text">[선택] 개인정보 수집 및 서비스 활용 동의</div>
+           
+            
+            <div class="agree__padding">
+              <button class="agree__Button">
+                <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImagePadding"/>
+              </button>
+              <div class="agree__Text">[선택] 마케팅 정보 SMS 수신동의</div>
+             
+              <button class="agree__Button">
+                <img src="/assets/icons/Type=No_Filled.png" alt="만 14세 이상입니다의 체크이미지" class="agree__ButtonImagePadding"/>
+              </button>
+              <div class="agree__Text">[선택] 마케팅 정보 dlapdlf수신동의</div>
+            </div>
+            <a href="/" class="sign__Button">가입하기</a>
+          </div>
+      </form>
+    </section>
+            
+          
+
+
+      <footer class="appFooter">
+        <div class="appFooter__wrapper">
+          <ul class="appFooter__link">
+            <li class="">
+              <span class="appFooter__notice__span">공지사항</span>
+              <a href="/">[안내] 합병보고 주주총회에 갈음하는 공고</a>
+            </li>
+            <li class="mobile--hidden">
+              <a href="" class="">
+                브랜드 바로가기 + </a>
+              <span class="divider" aria-hidden="true">ㅣ</span>
+              <a href="">그룹 계열사 바로가기 + </a>
+            </li>
+          </ul>
+      
+          <div class="fakeLine"></div>
+      
+          <div class="appFooter__innerWrapper">
+            <ul class="appFooter__wrapper__subLinks">
+              <li><a href="/">고객센터</a></li>
+              <li><a href="/">이용약관</a></li>
+              <li><a href="/">개인정보처리방침</a></li>
+              <li><a href="/">청소년 보호정책</a></li>
+              <li><a href="/">법적고지</a></li>
+              <li><a href="/">이벤트</a></li>
+              <li><a href="/">인재채용</a></li>
+            </ul>
+      
+            <section class="appFooter__innerWrapper__info mobile--hidden">
+      
+              <span>대표이사 : YANG JIEUL</span>
+              <span class="divider" aria-hidden="true">ㅣ</span><a class="underline" href="">사업자정보확인</a><span class="divider"
+                aria-hidden="true">ㅣ</span>사업자등록번호 : 188-88-01893<span class="divider" aria-hidden="true">ㅣ</span>통신판매신고번호 :
+              2020-서울마포-3641호<br>
+              사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)<span class="divider" aria-hidden="true">ㅣ</span>호스팅사업자 :
+              씨제이올리브네트웍스(주)<br>
+              <a class="underline" href="">고객문의 바로가기</a><span class="divider" aria-hidden="true">ㅣ</span>
+              <span class="underline">대표메일 : tving@cj.net</span><span class="divider" aria-hidden="true">ㅣ</span>
+              <span class="underline">고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span><br>
+              ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780
+              <span class="divider" aria-hidden="true">ㅣ</span>Mnet 고객센터(반송편성문의) : 1855-1631
+            </section>
+      
+            <ul class="appFooter__snsLinks">
+              <li><a class="sns_bg" href="/"><img class="sns_img" src="/assets/icons/youtube.png" alt="youtube" /></a></li>
+              <li><a class="sns_bg" href="/"><img class="sns_img" src="/assets/icons/instagram.png" alt="instagram" /></a>
+              </li>
+              <li><a class="sns_bg" href="/"><img class="sns_img" src="/assets/icons/twitter.png" alt="twitter" /></a></li>
+              <li><a class="sns_bg" href="/"><img class="sns_img" src="/assets/icons/facebook.png" alt="facebook" /></a></li>
+            </ul>
+      
+            <small class="copyright">Copyright &copy; 주식회사 티빙 All right reserved.</small>
+      
+          </div>
+        </div>
+      </footer>
+
+
+
+</body>
+</html>
