@@ -1,0 +1,151 @@
+@use "./../utils" as *;
+
+.a11yHidden,
+legend {
+  @include a11yHidden();
+}
+
+
+.taing__AllForm{
+  width: 70%;
+  padding-left: 35%;
+
+}
+
+.taing__SignIn{
+  color: #ffff;
+  padding-left: 34.5%;
+  font-size: 1.6vw;
+  font-weight: 700;
+  
+
+}
+.taing__StartText{
+  color: #898989;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  font-size: 1.2vw;
+  text-align: center;
+}
+.taing__Pwd,
+.taing__PwdCheck {
+  position: relative;
+}
+
+
+.taing__input{
+  width: 34.5vw;
+  height: 7vh;
+  background-color: #212121;
+  border-radius: 4px;
+  border: 1px solid #212121;
+  
+  @include tablet{
+    height: 5vh;
+  }
+
+  @include mobile{
+    height: 3.5vh;
+  }
+
+}
+
+.taing__pwdImage1{
+  position: absolute;
+  top: 33%;
+  right: 6%;
+  width: 5%;
+
+  @include tablet {
+      top:40%;
+    }
+  
+}
+.taing__pwdImage2{
+  position: absolute;
+  top: 47%;
+  right: 6%;
+  width: 5%;
+  
+  @include tablet {
+      top: 50%;
+    }
+  @include mobile {
+      top: 53%;
+    }
+}
+
+.input__bottomText{
+  color: #6B6B6B;
+  padding-top: 0.7%;
+  font-size: 1vw;
+}
+.all__Agree{
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+.agree__Text{
+  color: #6B6B6B;
+}
+
+.sign__Button{
+  padding: 3.5% 40%;
+  border-radius: 4px;
+  background-color: #404040;
+  color: #898989;
+  text-align: center;
+  align-items: center;
+}
+
+.agree__Button{
+  background-color: #000;
+  border: 1px solid #000;
+  width: 5%;
+  padding-top: 3%;
+}
+
+.agree__ButtonImage{
+  position: absolute;
+  left: 0;
+  
+  @include tablet {
+      width: 5%;
+    }
+  
+    @include mobile {
+      width: 6%;
+    }
+}
+
+.agree__Text{
+  font-size: 1vw;
+  padding-left: 6%;
+}
+
+.agree__TextSpace{
+  font-size: 1vw;
+  padding-left: 6%;
+  color: #6B6B6B;
+  padding-bottom: 2%;
+}
+
+.agree__padding{
+  padding-left: 8%;
+  padding-bottom: 5%;
+ 
+}
+
+.agree__ButtonImagePadding{
+  position: absolute;
+  left: 0;
+  padding-left: 8%;
+  
+  @include tablet {
+      width: 13%;
+    }
+  
+    @include mobile {
+      width: 14%;
+    }
+}
