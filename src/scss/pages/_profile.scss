@@ -1,0 +1,135 @@
+@use "sass:math";
+@use "./../utils" as *;
+@use "./../base" as *;
+
+body {
+  background: $black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerWrapper {
+  height: 100px;
+  margin: 1.5% 4%;
+
+  @include tablet {
+    height: 56px;
+  }
+  @include mobile {
+    height: 45px;
+  }
+
+}
+
+.profile {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+
+  &__title {
+    color: $white;
+    font-size: 3vw;
+    margin-bottom: 2vh;
+    font-weight: 700;
+  }
+
+  &__select {
+    color: $gray1;
+    font-size: 1.7vw;
+    font-weight: 600;
+  }
+
+  &__container {
+    margin: 6% 10%;
+    @include flexbox($justify:center);
+    gap: 4%;
+  }
+
+  &__itemLink {
+    @include flexbox($direction:column);
+    gap: 3vh;
+    color: $gray2;
+    position: relative;
+  }
+
+  &__itemImgBox::before {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 85%;
+  }
+
+  &__itemImgBox::after {
+    content: url(./../../assets/icon-profile-lock.png);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+  }
+
+  &__itemName {
+    font-size: 1.7vw;
+  }
+
+  &__edit {
+    background: transparent;
+    color: $gray2;
+    font-size: 1.5vw;
+    border: 1px solid $gray2;
+    border-radius: 5px;
+    padding: 1.5% 5%;
+  }
+
+  @include tablet {
+    &__itemImgBox::after {
+      content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
+    }
+
+    &__title {
+      font-size: 3vw;
+    }
+
+  }
+
+  @include mobile {
+
+    &__title {
+      font-size: 4vw;
+      margin-bottom: 1%;
+    }
+
+    &__select {
+      font-size: 2.5vw;
+    }
+
+    &__container {
+      @include flexbox($justify:space-evenly, $wrap:wrap);
+      gap: 2vh;
+    }
+
+    &__item {
+      width: 35%;
+      margin-bottom: 2%;
+    }
+
+    &__itemLink {
+      gap: 2vw;
+    }
+
+    &__itemImgBox::after {
+      content: url(./../../assets/icon-device-mobile-tablet-name-lock.png);
+    }
+
+    &__itemName {
+      font-size: 2.8vw;
+    }
+
+    &__edit{
+      font-size: 2vw;
+    }
+  }
+}
