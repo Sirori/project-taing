@@ -63,12 +63,13 @@ a {
     height: 85%;
   }
 
-  &__itemImgBox::after {
+  &__itemImgBoxLock::after {
     content: url(./../../assets/icon-profile-lock.png);
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-40%, -50%);
+    z-index: 5;
   }
 
   &__itemName {
