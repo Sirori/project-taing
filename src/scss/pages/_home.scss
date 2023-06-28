@@ -6,10 +6,21 @@ legend {
 }
 
 
+
 .taing__AllForm{
   width: 70%;
   padding-left: 35%;
+  position: relative;
+  margin-top: rem(15px);
+  @include tablet {
+    margin-top: rem(90px);
+    
+  }
+  
+  @include mobile {
+    margin-top: rem(120px);
 
+  }
 }
 
 .taing__SignIn{
@@ -84,10 +95,18 @@ legend {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
+  justify-content: flex-start;
 }
+
 .agree__Text{
   color: #6B6B6B;
+  display: flex;
+  font-size: rem(19px);
+  padding-left: 7%;
+  font-weight: 600;
+  white-space: nowrap;
 }
+
 
 .sign__Button{
   padding: 3.5% 40%;
@@ -98,16 +117,11 @@ legend {
   align-items: center;
 }
 
-.agree__Button{
-  background-color: #000;
-  border: 1px solid #000;
-  width: 5%;
-  padding-top: 3%;
-}
+
 
 .agree__ButtonImage{
   position: absolute;
-  left: 0;
+  // left: 0;
   
   @include tablet {
       width: 5%;
@@ -118,26 +132,18 @@ legend {
     }
 }
 
-.agree__Text{
-  font-size: 1vw;
-  padding-left: 6%;
-}
-
 .agree__TextSpace{
-  font-size: 1vw;
   padding-left: 6%;
   color: #6B6B6B;
-  padding-bottom: 2%;
+  margin-top: 3;
 }
 
-.agree__padding{
-  padding-left: 8%;
-  padding-bottom: 5%;
- 
-}
+
 
 .agree__ButtonImagePadding{
   position: absolute;
+  display: flex;
+  align-items: center;
   left: 0;
   padding-left: 8%;
   
@@ -148,4 +154,66 @@ legend {
     @include mobile {
       width: 14%;
     }
+}
+
+.pw-icon {
+  position: relative;
+  
+}
+.pw-icon img {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-35%);
+}
+
+.pwInput {
+  width: 100%;
+}
+
+.form_sp {
+  margin-bottom: 1.5vw;
+  margin-top: rem(5px);
+}
+
+.signIn__subTxt {
+  font-size: rem(20px);
+  white-space: nowrap;
+  
+  &__top {
+    font-size: rem(20px);
+    font-weight: 600;
+    line-height: 150%;
+    white-space: nowrap;
+    color: $gray0;
+    margin-bottom: 5vw;
+    display: flex;
+    justify-content: center;
+    
+    @include mobile {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.allCheck {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: rem(5px);
+}
+
+.check__box {
+  margin-top: 1.5vw;
+
+}
+
+.checkList {
+  display: flex;
+  align-items: center;
+  // padding-left: 1em;
+}
+
+.marketing {
+  padding-left: 2em;
 }

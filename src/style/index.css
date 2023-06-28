@@ -505,6 +505,18 @@ legend {
 .taing__AllForm {
   width: 70%;
   padding-left: 35%;
+  position: relative;
+  margin-top: 0.9375rem;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .taing__AllForm {
+    margin-top: 5.625rem;
+  }
+}
+@media (max-width: 768px) {
+  .taing__AllForm {
+    margin-top: 7.5rem;
+  }
 }
 
 .taing__SignIn {
@@ -584,10 +596,16 @@ legend {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
+  justify-content: flex-start;
 }
 
 .agree__Text {
   color: #6B6B6B;
+  display: flex;
+  font-size: 1.1875rem;
+  padding-left: 7%;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .sign__Button {
@@ -599,16 +617,8 @@ legend {
   align-items: center;
 }
 
-.agree__Button {
-  background-color: #000;
-  border: 1px solid #000;
-  width: 5%;
-  padding-top: 3%;
-}
-
 .agree__ButtonImage {
   position: absolute;
-  left: 0;
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .agree__ButtonImage {
@@ -621,25 +631,16 @@ legend {
   }
 }
 
-.agree__Text {
-  font-size: 1vw;
-  padding-left: 6%;
-}
-
 .agree__TextSpace {
-  font-size: 1vw;
   padding-left: 6%;
   color: #6B6B6B;
-  padding-bottom: 2%;
-}
-
-.agree__padding {
-  padding-left: 8%;
-  padding-bottom: 5%;
+  margin-top: 3;
 }
 
 .agree__ButtonImagePadding {
   position: absolute;
+  display: flex;
+  align-items: center;
   left: 0;
   padding-left: 8%;
 }
@@ -652,6 +653,66 @@ legend {
   .agree__ButtonImagePadding {
     width: 14%;
   }
+}
+
+.pw-icon {
+  position: relative;
+}
+
+.pw-icon img {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-35%);
+}
+
+.pwInput {
+  width: 100%;
+}
+
+.form_sp {
+  margin-bottom: 1.5vw;
+  margin-top: 0.3125rem;
+}
+
+.signIn__subTxt {
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+.signIn__subTxt__top {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 150%;
+  white-space: nowrap;
+  color: #898989;
+  margin-bottom: 5vw;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .signIn__subTxt__top {
+    justify-content: flex-start;
+  }
+}
+
+.allCheck {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.3125rem;
+}
+
+.check__box {
+  margin-top: 1.5vw;
+}
+
+.checkList {
+  display: flex;
+  align-items: center;
+}
+
+.marketing {
+  padding-left: 2em;
 }
 
 body {
@@ -764,14 +825,24 @@ h1 {
 /* 메인 베너 아이콘 */
 .left__icon {
   position: absolute;
+  width: 4%;
   top: 50%;
   left: 0;
 }
 
 .right__icon {
   position: absolute;
+  width: 4%;
   top: 50%;
-  right: -2%;
+  right: 0;
+}
+
+.left__icon img {
+  width: 100%;
+}
+
+.right__icon img {
+  width: 100%;
 }
 
 .i__icon {
@@ -1351,6 +1422,18 @@ input {
   flex-flow: column nowrap;
   margin-top: 1.5vw;
 }
+@media (max-width: 768px) {
+  .findId__title {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .findId__title {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+}
 
 .findId__title {
   font-size: 2.1875rem;
@@ -1391,6 +1474,7 @@ input {
 }
 .or__txt {
   font-size: 1rem;
+  color: #6B6B6B;
 }
 
 .fakeLine2 {

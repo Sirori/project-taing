@@ -112,15 +112,25 @@ h1 {
 /* 메인 베너 아이콘 */
 .left__icon {
   position: absolute;
+  width: 4%;
   top: 50%;
   left: 0;
 }
 
 .right__icon {
   position: absolute;
+  width: 4%;
   top: 50%;
-  right: -2%;
+  right: 0;
 }
+
+.left__icon img {
+  width: 100%;
+}
+.right__icon img {
+  width: 100%;
+}
+
 
 .i__icon {
   position: absolute;
